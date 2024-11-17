@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Y la tuya cuál es?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+            line-height: 1.6;
+        }
+        h1, h2 {
+            text-align: center;
+            color: #333;
+        }
+        .section {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background: #f9f9f9;
+        }
+        .question {
+            margin: 10px 0;
+        }
+        button {
+            padding: 10px 20px;
+            background: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 10px;
+            background: #e0f7fa;
+            border: 1px solid #00acc1;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>¿Y la tuya cuál es?</h1>
+    <p>Selecciona los intereses que te identifican para descubrir áreas profesionales relacionadas.</p>
+
+    <!-- Preguntas -->
+    <form id="test-form">
+        <!-- Pregunta 1 -->
+        <div class="section">
+            <h2>1) Si tienes…</h2>
+            <p>Sensibilidad para el arte, despiertas pasión con tus historias, dibujos, personajes, músicas. Consigues ver las cosas comunes de un modo diferente y encantador.</p>
+            <label>
+                <input type="checkbox" value="Arquitectura/ decoración"> Arquitectura/ decoración
+            </label><br>
+            <label>
+                <input type="checkbox" value="Artes escénicas/ Cine/ Fotografía"> Artes escénicas/ Cine/ Fotografía
+            </label><br>
+            <label>
+                <input type="checkbox" value="Artes plásticas/ moda/ Radio"> Artes plásticas/ moda/ Radio
+            </label><br>
+            <label>
+                <input type="checkbox" value="Publicidad y Marketing"> Publicidad y Marketing
+            </label>
+        </div>
+
+        <!-- Pregunta 2 -->
+        <div class="section">
+            <h2>2) Si tienes…</h2>
+            <p>Facilidad para imaginar estructuras tridimensionales, ves que los muebles quedarían mejor en otra ubicación en el espacio.</p>
+            <label>
+                <input type="checkbox" value="Arquitectura/ decoración"> Arquitectura/ decoración
+            </label><br>
+            <label>
+                <input type="checkbox" value="Diseño industrial"> Diseño industrial
+            </label><br>
+            <label>
+                <input type="checkbox" value="Moda"> Moda
+            </label><br>
+            <label>
+                <input type="checkbox" value="Ingeniería"> Ingeniería
+            </label>
+        </div>
+
+        <!-- Más preguntas se agregarán aquí -->
+        
+        <!-- Pregunta 3 -->
+        <div class="section">
+            <h2>3) Si te gustan…</h2>
+            <p>Las computadoras, y pasas buscando o inventando nuevos programas</p>
+            <label>
+                <input type="checkbox" value="Ingeniería de sistemas"> Ingeniería de sistemas
+            </label><br>
+            <label>
+                <input type="checkbox" value="Estadística"> Estadística
+            </label><br>
+            <label>
+                <input type="checkbox" value="Matemáticas"> Matemáticas
+            </label>
+        </div>
+
+        <!-- Pregunta 4 -->
+        <div class="section">
+            <h2>4) Si tienes…</h2>
+            <p>Buena memoria, te acuerdas de detalles de lo que haz hecho el mismo día el año pasado. Memorizas nombres de personas y lugares, y puedes repetir una historia que oíste hace tiempo.</p>
+            <label>
+                <input type="checkbox" value="Literatura/ Lingüística/ Historia"> Literatura/ Lingüística/ Historia
+            </label><br>
+            <label>
+                <input type="checkbox" value="Abogacía/ Matemática/ Estadística"> Abogacía/ Matemática/ Estadística
+            </label><br>
+            <label>
+                <input type="checkbox" value="Medicina/ Veterinaria"> Medicina/ Veterinaria
+            </label><br>
+            <label>
+                <input type="checkbox" value="Oceanografía"> Oceanografía
+            </label><br>
+            <label>
+                <input type="checkbox" value="Geofísica/ Geografía"> Geofísica/ Geografía
+            </label><br>
+            <label>
+                <input type="checkbox" value="Ciencias Biológicas"> Ciencias Biológicas
+            </label><br>
+            <label>
+                <input type="checkbox" value="Secretariado"> Secretariado
+            </label>
+        </div>
+
+        <!-- Pregunta 5 -->
+        <div class="section">
+            <h2>5) Si tienes…</h2>
+            <p>Flexibilidad, paciencia y tolerancia, piensas y reaccionas rápido, te gusta improvisar. Das una clase perfectamente sin haberte preparado antes.</p>
+            <label>
+                <input type="checkbox" value="Teatro/ Cine"> Teatro/ Cine
+            </label><br>
+            <label>
+                <input type="checkbox" value="Diplomacia/ Relaciones Públicas"> Diplomacia/ Relaciones Públicas
+            </label><br>
+            <label>
+                <input type="checkbox" value="Derecho"> Derecho
+            </label><br>
+            <label>
+                <input type="checkbox" value="Periodismo/ Ciencias de la Comunicación"> Periodismo/ Ciencias de la Comunicación
+            </label><br>
+            <label>
+                <input type="checkbox" value="Magisterio/ Profesorado"> Magisterio/ Profesorado
+            </label><br>
+            <label>
+                <input type="checkbox" value="Pedagogía/ Psicología"> Pedagogía/ Psicología
+            </label><br>
+            <label>
+                <input type="checkbox" value="Publicidad/ Secretariado"> Publicidad/ Secretariado
+            </label><br>
+            <label>
+                <input type="checkbox" value="Trabajo Social/ Psicología Social"> Trabajo Social/ Psicología Social
+            </label><br>
+            <label>
+                <input type="checkbox" value="Turismo"> Turismo
+            </label>
+        </div>
+
+        <!-- Pregunta 6 -->
+        <div class="section">
+            <h2>6) Si tienes…</h2>
+            <p>Intimidad con números, adoras hacer cuentas y cálculos. Memorizas y descompones fórmulas complicadas sin una calculadora.</p>
+            <label>
+                <input type="checkbox" value="Matemática/ Física"> Matemática/ Física
+            </label><br>
+            <label>
+                <input type="checkbox" value="Administración"> Administración
+            </label><br>
+            <label>
+                <input type="checkbox" value="Ingeniería/ Astronomía/ Geofísica"> Ingeniería/ Astronomía/ Geofísica
+            </label><br>
+            <label>
+                <input type="checkbox" value="Estadística"> Estadística
+            </label><br>
+            <label>
+                <input type="checkbox" value="Ciencias Contables o Económicas"> Ciencias Contables o Económicas
+            </label><br>
+            <label>
+                <input type="checkbox" value="Computación/ Química"> Computación/ Química
+            </label>
+        </div>
+
+        <!-- Pregunta 7 -->
+        <div class="section">
+            <h2>7) Si eres…</h2>
+            <p>Persuasivo a punto de convencer a tus amigos a ir a un lugar antes que a otro y que todos lo encuentren bárbaro.</p>
+            <label>
+                <input type="checkbox" value="Diplomacia"> Diplomacia
+            </label><br>
+            <label>
+                <input type="checkbox" value="Derecho/ Ciencias Políticas"> Derecho/ Ciencias Políticas
+            </label><br>
+            <label>
+                <input type="checkbox" value="Publicidad/ Marketing"> Publicidad/ Marketing
+            </label><br>
+            <label>
+                <input type="checkbox" value="Relaciones Internacionales"> Relaciones Internacionales
+            </label><br>
+            <label>
+                <input type="checkbox" value="Ventas"> Ventas
+            </label>
+        </div>
+
+        <!-- Pregunta 8 -->
+        <div class="section">
+            <h2>8) Si te gusta…</h2>
+            <p>Vivir al aire libre, acampar, trabajar la tierra, jugar con animales, piedras y plantas. Te parece impecable mojarte en la lluvia, o pasar horas al sol.</p>
+            <label>
+                <input type="checkbox" value="Arqueología"> Arqueología
+            </label><br>
+            <label>
+                <input type="checkbox" value="Astronomía"> Astronomía
+            </label><br>
+            <label>
+                <input type="checkbox" value="Agronomía/ Geología"> Agronomía/ Geología
+            </label><br>
+            <label>
+                <input type="checkbox" value="Ecología/ Pescador"> Ecología/ Pescador
+            </label><br>
+            <label>
+                <input type="checkbox" value="Educación Física/ Deportista"> Educación Física/ Deportista
+            </label><br>
+            <label>
+                <input type="checkbox" value="Ingeniería Agrícola"> Ingeniería Agrícola
+            </label><br>
+            <label>
+                <input type="checkbox" value="Técnico Forestal o Agropecuario"> Técnico Forestal o Agropecuario
+            </label><br>
+            <label>
+                <input type="checkbox" value="Apicultor"> Apicultor
+            </label><br>
+            <label>
+                <input type="checkbox" value="Ingeniero Agrimensor o Ing. Civil"> Ingeniero Agrimensor o Ing. Civil
+            </label><br>
+            <label>
+                <input type="checkbox" value="Oceanografía/ Veterinaria"> Oceanografía/ Veterinaria
+            </label>
+        </div>
+
+        <!-- Pregunta 9 -->
+        <div class="section">
+            <h2>9) Si te gusta…</h2>
+            <p>Leer todo lo que cae en tus manos, sabes de los últimos libros o publicaciones, conoces libros de distintos escritores.</p>
+            <label>
+                <input type="checkbox" value="Trabajo Social/ Derecho"> Trabajo Social/ Derecho
+            </label><br>
+            <label>
+                <input type="checkbox" value="Filosofía"> Filosofía
+            </label><br>
+            <label>
+                <input type="checkbox" value="Historia"> Historia
+            </label><br>
+            <label>
+                <input type="checkbox" value="Periodismo/ Ciencias de la Comunicación"> Periodismo/ Ciencias de la Comunicación
+            </label><br>
+            <label>
+                <input type="checkbox" value="Letras/ Lingüística"> Letras/ Lingüística
+            </label><br>
+            <label>
+                <input type="checkbox" value="Sociología/ Psicología"> Sociología/ Psicología
+            </label>
+        </div>
+
+        <!-- Pregunta 10 -->
+        <div class="section">
+            <h2>10) Si eres…</h2>
+            <p>Creativo, inventas siempre novedades, imaginas juegos diferentes, tus trabajos en el liceo tienen buenas presentaciones. Tus amigos consideran buenas las cosas que presentas.</p>
+            <label>
+                <input type="checkbox" value="Dibujante/ Fotografía"> Dibujante/ Fotografía
+            </label><br>
+            <label>
+                <input type="checkbox" value="Arquitectura"> Arquitectura
+            </label><br>
+            <label>
+                <input type="checkbox" value="Teatro"> Teatro
+            </label><br>
+            <label>
+                <input type="checkbox" value="Artes Plásticas"> Artes Plásticas
+            </label><br>
+            <label>
+                <input type="checkbox" value="Cine/ Publicidad"> Cine/ Publicidad
+            </label><br>
+            <label>
+                <input type="checkbox" value="Decoración"> Decoración
+            </label><br>
+            <label>
+                <input type="checkbox" value="Diseño Industrial"> Diseño Industrial
+            </label><br>
+            <label>
+                <input type="checkbox" value="Moda/ Turismo"> Moda/ Turismo
+            </label><br>
+            <label>
+                <input type="checkbox" value="Musicoterapia/ Pedagogía"> Musicoterapia/ Pedagogía
+            </label>
+        </div>
+
+        <!-- Pregunta 11 -->
+        <div class="section">
+            <h2>11) Si logras…</h2>
+            <p>Tener autocontrol en las situaciones más difíciles, aplicarle una inyección a tu perro, ver que alguien se accidenta y ser el primero en reaccionar y pedir que llamen a un médico, o le prestas los primeros auxilios.</p>
+            <label>
+                <input type="checkbox" value="Trabajo Social"> Trabajo Social
+            </label><br>
+            <label>
+                <input type="checkbox" value="Terapia Ocupacional"> Terapia Ocupacional
+            </label><br>
+            <label>
+                <input type="checkbox" value="Diplomacia"> Diplomacia
+            </label><br>
+            <label>
+                <input type="checkbox" value="Derecho"> Derecho
+            </label><br>
+            <label>
+                <input type="checkbox" value="Enfermería"> Enfermería
+            </label><br>
+            <label>
+                <input type="checkbox" value="Medicina- Imagenología"> Medicina- Imagenología
+            </label><br>
+            <label>
+                <input type="checkbox" value="Veterinaria"> Veterinaria
+            </label><br>
+            <label>
+                <input type="checkbox" value="Psicología – Psicología Social"> Psicología – Psicología Social
+            </label>
+        </div>
+
+        <!-- Pregunta 12 -->
+        <div class="section">
+            <h2>12) Si tú eres…</h2>
+            <p>Discreto, sabes guardar un secreto, te enteras de ciertos hechos que pueden afectar a otros y no los sales a comentar. Eres condescendiente con la forma de ser de los demás.</p>
+            <label>
+                <input type="checkbox" value="Diplomacia"> Diplomacia
+            </label><br>
+            <label>
+                <input type="checkbox" value="Derecho"> Derecho
+            </label><br>
+            <label>
+                <input type="checkbox" value="Medicina"> Medicina
+            </label><br>
+            <label>
+                <input type="checkbox" value="Psicología"> Psicología
+            </label><br>
+            <label>
+                <input type="checkbox" value="Secretariado Ejecutivo"> Secretariado Ejecutivo
+            </label><br>
+            <label>
+                <input type="checkbox" value="Trabajo Social"> Trabajo Social
+            </label>
+        </div>
+
+        <!-- Pregunta 13 -->
+        <div class="section">
+            <h2>13) Si tú logras…</h2>
+            <p>Estudiar para una prueba difícil acostado en el suelo, con la TV prendida o escuchando música, o aún cuando hay muchos ruidos o muchas personas hablando.</p>
+            <label>
+                <input type="checkbox" value="Química/ Física"> Química/ Física
+            </label><br>
+            <label>
+                <input type="checkbox" value="Matemática/ Estadística"> Matemática/ Estadística
+            </label><br>
+            <label>
+                <input type="checkbox" value="Ciencias Biológicas/ Medicina"> Ciencias Biológicas/ Medicina
+            </label><br>
+            <label>
+                <input type="checkbox" value="Ciencias Biomédicas/ Odontología"> Ciencias Biomédicas/ Odontología
+            </label><br>
+            <label>
+                <input type="checkbox" value="Computación"> Computación
+            </label><br>
+            <label>
+                <input type="checkbox" value="Ingeniería"> Ingeniería
+            </label>
+        </div>
+
+        <!-- Pregunta 14 -->
+        <div class="section">
+            <h2>14) Si te gusta…</h2>
+            <p>Hacer experiencias científicas, disfrutar las clases de química y biología. En el laboratorio te encanta abrir y estudiar animales. Haces mezclas de cosas para ver si encuentras algo nuevo.</p>
+            <label>
+                <input type="checkbox" value="Ciencias Biológicas"> Ciencias Biológicas
+            </label><br>
+            <label>
+                <input type="checkbox" value="Ciencias Biomédicas"> Ciencias Biomédicas
+            </label><br>
+            <label>
+                <input type="checkbox" value="Ingeniería de Alimentos"> Ingeniería de Alimentos
+            </label><br>
+            <label>
+                <input type="checkbox" value="Ingeniería Química"> Ingeniería Química
+            </label><br>
+            <label>
+                <input type="checkbox" value="Química Farmacéutica"> Química Farmacéutica
+            </label><br>
+            <label>
+                <input type="checkbox" value="Medicina"> Medicina
+            </label><br>
+            <label>
+                <input type="checkbox" value="Nutricionista"> Nutricionista
+            </label>
+        </div>
+
+        <!-- Pregunta 15 -->
+        <div class="section">
+            <h2>15) Si tú logras…</h2>
+            <p>Escribir bien y hacer redacciones fantásticas, expresarte con facilidad y transmitir tus ideas con claridad. Salir bien en las pruebas orales, ser siempre el portavoz de un grupo.</p>
+            <label>
+                <input type="checkbox" value="Ciencias Políticas/ Psicología"> Ciencias Políticas/ Psicología
+            </label><br>
+            <label>
+                <input type="checkbox" value="Ciencias Sociales/ Pedagogía"> Ciencias Sociales/ Pedagogía
+            </label><br>
+            <label>
+                <input type="checkbox" value="Diplomacia/ Magisterio"> Diplomacia/ Magisterio
+            </label><br>
+            <label>
+                <input type="checkbox" value="Derecho/ Historia"> Derecho/ Historia
+            </label><br>
+            <label>
+                <input type="checkbox" value="Filosofía/ Publicidad"> Filosofía/ Publicidad
+            </label><br>
+            <label>
+                <input type="checkbox" value="Periodismo/ Letras/ Lingüística"> Periodismo/ Letras/ Lingüística
+            </label><br>
+            <label>
+                <input type="checkbox" value="Relaciones Internacionales"> Relaciones Internacionales
+            </label><br>
+            <label>
+                <input type="checkbox" value="Servicio Social"> Servicio Social
+            </label>
+        </div>
+
+        <!-- Pregunta 16 -->
+        <div class="section">
+            <h2>16) Si te gusta…</h2>
+            <p>Hacer cosas con las manos, pintar, dibujar, armar miniaturas, coser, visitar museos o exposiciones y tienes buena coordinación motora.</p>
+            <label>
+                <input type="checkbox" value="Carpintería/ Artesanía en madera"> Carpintería/ Artesanía en madera
+            </label><br>
+            <label>
+                <input type="checkbox" value="Artes Plásticas"> Artes Plásticas
+            </label><br>
+            <label>
+                <input type="checkbox" value="Decoración"> Decoración
+            </label><br>
+            <label>
+                <input type="checkbox" value="Diseño Industrial y Textil"> Diseño Industrial y Textil
+            </label><br>
+            <label>
+                <input type="checkbox" value="Enfermería/ Odontología"> Enfermería/ Odontología
+            </label><br>
+            <label>
+                <input type="checkbox" value="Fisioterapia"> Fisioterapia
+            </label><br>
+            <label>
+                <input type="checkbox" value="Fotografía"> Fotografía
+            </label>
+        </div>
+
+        <!-- Pregunta 17 -->
+        <div class="section">
+            <h2>17) Si tú eres…</h2>
+            <p>Observador, te gusta hacer de Sherlock Holmes, te interesas en los pequeños detalles y estás generalmente atento a las cosas que a los demás le pasan por alto.</p>
+            <label>
+                <input type="checkbox" value="Arqueología/ Detective"> Arqueología/ Detective
+            </label><br>
+            <label>
+                <input type="checkbox" value="Arquitectura/ Química"> Arquitectura/ Química
+            </label><br>
+            <label>
+                <input type="checkbox" value="Archivología/ Bibliotecología"> Archivología/ Bibliotecología
+            </label><br>
+            <label>
+                <input type="checkbox" value="Astronomía/ Meteorología"> Astronomía/ Meteorología
+            </label><br>
+            <label>
+                <input type="checkbox" value="Estadística/ Matemática"> Estadística/ Matemática
+            </label><br>
+            <label>
+                <input type="checkbox" value="Ciencias Biológicas/ Veterinaria"> Ciencias Biológicas/ Veterinaria
+            </label><br>
+            <label>
+                <input type="checkbox" value="Ciencias Biomédicas/ Laboratorista"> Ciencias Biomédicas/ Laboratorista
+            </label><br>
+            <label>
+                <input type="checkbox" value="Odontología/ Periodismo"> Odontología/ Periodismo
+            </label><br>
+            <label>
+                <input type="checkbox" value="Derecho/ Psicología"> Derecho/ Psicología
+            </label><br>
+            <label>
+                <input type="checkbox" value="Geografía/ Historia"> Geografía/ Historia
+            </label>
+        </div>
+
+        <!-- Pregunta 18 -->
+        <div class="section">
+            <h2>18) Si tú eres…</h2>
+            <p>Organizado, guardas cada cosa. Ejecutivo, tus cosas vienen en orden y haces trabajos con una secuencia lógica de qué es lo primero y qué viene después.</p>
+            <label>
+                <input type="checkbox" value="Administración/ Secretariado"> Administración/ Secretariado
+            </label><br>
+            <label>
+                <input type="checkbox" value="Archivología/ Bibliotecología"> Archivología/ Bibliotecología
+            </label><br>
+            <label>
+                <input type="checkbox" value="Matemática"> Matemática
+            </label><br>
+            <label>
+                <input type="checkbox" value="Constructor"> Constructor
+            </label><br>
+            <label>
+                <input type="checkbox" value="Ciencias Contables/ Estadística"> Ciencias Contables/ Estadística
+            </label><br>
+            <label>
+                <input type="checkbox" value="Ciencias Económicas"> Ciencias Económicas
+            </label><br>
+            <label>
+                <input type="checkbox" value="Ingeniería"> Ingeniería
+            </label>
+        </div>
+
+        <!-- Pregunta 19 -->
+        <div class="section">
+            <h2>19) Si tú eres…</h2>
+            <p>Paciente y perseverante, controlas bien tu ansiedad, pero no descansas mientras no consigues lo que quieres.</p>
+            <label>
+                <input type="checkbox" value="Abogado/ Psicomotricista"> Abogado/ Psicomotricista
+            </label><br>
+            <label>
+                <input type="checkbox" value="Pintor/ Vendedor/ Fotógrafo"> Pintor/ Vendedor/ Fotógrafo
+            </label><br>
+            <label>
+                <input type="checkbox" value="Diplomacia/ Magisterio"> Diplomacia/ Magisterio
+            </label><br>
+            <label>
+                <input type="checkbox" value="Enfermería/ Fonoaudiología"> Enfermería/ Fonoaudiología
+            </label><br>
+            <label>
+                <input type="checkbox" value="Ingeniería Química/ Bioquímica"> Ingeniería Química/ Bioquímica
+            </label><br>
+            <label>
+                <input type="checkbox" value="Química Farmacéutica"> Química Farmacéutica
+            </label><br>
+            <label>
+                <input type="checkbox" value="Fisioterapia/ Terapia Ocupacional"> Fisioterapia/ Terapia Ocupacional
+            </label><br>
+            <label>
+                <input type="checkbox" value="Medicina/ Veterinaria/ Odontología"> Medicina/ Veterinaria/ Odontología
+            </label>
+        </div>
+
+        <!-- Pregunta 20 -->
+        <div class="section">
+            <h2>20) Si tú eres…</h2>
+            <p>Inquieto, participas perfectamente en todas las planificaciones de tu grupo de amigos, estás siempre en movimiento, te gusta hacer ejercicios, vas con placer al club o gimnasio y eres incansable.</p>
+            <label>
+                <input type="checkbox" value="Agronomía/ Veterinaria"> Agronomía/ Veterinaria
+            </label><br>
+            <label>
+                <input type="checkbox" value="Arquitectura/ Carpintería"> Arquitectura/ Carpintería
+            </label><br>
+            <label>
+                <input type="checkbox" value="Educación Física"> Educación Física
+            </label><br>
+            <label>
+                <input type="checkbox" value="Herrería/ Mecánico"> Herrería/ Mecánico
+            </label><br>
+            <label>
+                <input type="checkbox" value="Ingeniería/ Ingeniero Civil"> Ingeniería/ Ingeniero Civil
+            </label><br>
+            <label>
+                <input type="checkbox" value="Profesor de Educación Física"> Profesor de Educación Física
+            </label><br>
+            <label>
+                <input type="checkbox" value="Turismo/ Periodismo"> Turismo/ Periodismo
+            </label><br>
+            <label>
+                <input type="checkbox" value="Deportista"> Deportista
+            </label>
+        </div>
+
+        <!-- Botón para ver resultado -->
+        <div style="text-align: center; margin-top: 20px;">
+            <button type="button" onclick="mostrarResultado()">Ver Resultado</button>
+        </div>
+    </form>
+
+    <!-- Resultado -->
+    <div id="resultado" class="result" style="display: none;"></div>
+
+    <script>
+        function mostrarResultado() {
+            // Obtener todas las opciones seleccionadas
+            const seleccionados = Array.from(document.querySelectorAll('input[type="checkbox"]:checked'))
+                .map(input => input.value);
+
+            // Mostrar resultado
+            const resultadoDiv = document.getElementById("resultado");
+            resultadoDiv.style.display = "block";
+            if (seleccionados.length > 0) {
+                resultadoDiv.innerHTML = `<h2>Tu selección:</h2><ul>${seleccionados.map(opcion => `<li>${opcion}</li>`).join('')}</ul>`;
+            } else {
+                resultadoDiv.innerHTML = `<h2>No seleccionaste ninguna opción.</h2><p>Por favor, elige al menos un interés para continuar.</p>`;
+            }
+        }
+    </script>
+</body>
+</html>
